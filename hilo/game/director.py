@@ -8,8 +8,9 @@ class Director:
 
     Attributes:
         is_playing (boolean): Whether or not the game is being played.
-        score (int): The score for one round of play.
-        total_score (int): The score for the entire game.
+        score (int): The score for the entire game.
+        user_choice (str): is the user input.
+        play(Card): an instance for Card.
     """
 
     def __init__(self):
@@ -20,8 +21,8 @@ class Director:
         """
         self.is_playing = True
         self.score = 0
-        self.total_score = 0
-        play = self.Card()
+        self.user_choice=''
+        self.play = Card()
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -30,19 +31,21 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.is_playing:
+            new_card = self.play.shuffle_first_card()
+            print(f'The card is: {new_card}')
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
 
     def get_inputs(self):
-        """Ask the user if they want to play.
+        """Ask the user for input.
 
         Args:
             self (Director): An instance of Director.
         """
-        play_card = input("Play again? [y/n] ")
-        self.is_playing = (play_card == "y")
-        new_card = self.display_card()
+        
+        self.user_choice=input('Higher or lower? (H/L): ')
+        
 
        
     def do_updates(self):
@@ -53,18 +56,28 @@ class Director:
         """
         if not self.is_playing:
             return 
-        play = self.Card()
-        play.display_card()
-        self.score += play.points 
-        self.total_score += self.score
+        
+        second_value=self.play.shuffle_sec_card()
+        print(f'Next card was: {second_value}')
+        self.score=self.play.compute_score(self.user_choice.capitalize())
 
     def do_outputs(self):
-        """Displays the dice and the score. Also asks the player if they want to roll again. 
+        """Displays the score. Also asks the player if they want to Play again. 
 
         Args:
             self (Director): An instance of Director.
         """
         if not self.is_playing:
             return
-    
-        self.is_playing == (self.score > 0)
+        
+        if self.score<=0:
+            print('Game Over your score is: 0')
+            self.is_playing = False
+            return
+            
+        print(f'Your score is: {self.score}')
+        
+        play_card = input("Play again? [y/n] ")
+        if play_card.lower()=='n':
+            print('Thanks for playing with us.')
+        self.is_playing = (play_card.lower() == "y")
