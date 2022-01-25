@@ -3,13 +3,13 @@ import random
 # begin class declaration for stack of 13 cards
 """A stack of cards numbered 1 - 13 is used.
 
-    the responsibility of the Card class is to keep track of the 
+    The responsibility of the Card class is to keep track of the 
     number on the card displayed.
 
     Attributes:
         f_value (int): the number of the first card.
         s_value (int): the number of the second card.
-        points (int): Start at 300. The number of points accumulated by the player. 
+        points (int): Starts at 300. The number of points accumulated by the player. 
 """
 class Card:
     """ Constructs an instance for the displayed Card with a

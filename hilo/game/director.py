@@ -9,8 +9,8 @@ class Director:
     Attributes:
         is_playing (boolean): Whether or not the game is being played.
         score (int): The score for the entire game.
-        user_choice (str): is the user input.
-        play(Card): an instance for Card.
+        user_choice (str): The user's input.
+        play (Card): An instance of Card.
     """
 
     def __init__(self):
@@ -38,7 +38,7 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        """Ask the user for input.
+        """Asks the user for input.
 
         Args:
             self (Director): An instance of Director.
