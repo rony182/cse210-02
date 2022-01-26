@@ -31,5 +31,5 @@ root                    (project root folder)
 * Kwazeme Ogubie (ogu21006@byui.edu)
 * A. Belén Chaparro
 * Fabrizio Carlassara
-* 
+* Rony Nickson Calderon Sara (cal21043@byui.edu)
 * 
