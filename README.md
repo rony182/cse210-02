@@ -29,7 +29,7 @@ root                    (project root folder)
 ## Authors (CSE210 winter 2022: Team 08)
 ---
 * Kwazeme Ogubie (ogu21006@byui.edu)
-* A. Belén Chaparro
+* A. Belén Chaparro (cha21065@byui.edu)
 * Fabrizio Carlassara
 * Rony Nickson Calderon Sara (cal21043@byui.edu)
 * 
