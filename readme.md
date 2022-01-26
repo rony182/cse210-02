@@ -32,4 +32,3 @@ root                    (project root folder)
 * A. Belén Chaparro (cha21065@byui.edu)
 * Fabrizio Carlassara (car21101@byui.edu)
 * Rony Nickson Calderon Sara (cal21043@byui.edu)
-* .
